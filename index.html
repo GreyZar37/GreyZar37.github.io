@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+<div id="header">
+
+    <div class="container">
+        <nav>
+            <img src="Images/SECHOVCOLogo.png">
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#Portfolio">Portfolio</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+
+        </nav>
+        <div class="header-title">
+
+            <div class="header-text">
+                <p>Game Programmer</p>
+                <h1>Hi, I'm Oleg Sechovcov<br> From Danmark</h1>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- -----------------About------------------ -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/Logo.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar, lorem sit amet condimentum cursus, ipsum tellus condimentum mauris, non aliquam neque purus a erat. Pellentesque finibus nisl dolor, ac malesuada neque egestas a.
+                        Curabitur ultricies lobortis felis, sed commodo sapien. Etiam eu egestas urna. Phasellus vel auctor sapien, eu dignissim est. Curabitur eu ultrices ante.
+                        Ut nisl turpis, pretium vel enim eget, mattis interdum neque. Quisque dignissim lectus quis pellentesque semper. Donec urna turpis, semper eget euismod tempor, pulvinar nec ante.
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque id leo in neque bibendum dapibus.
+                        Morbi sit amet mauris tincidunt nulla vulputate malesuada.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="OpenTab('Skills')">Skills</p>
+                        <p class="tab-links"onclick="OpenTab('Experience')">Experience</p>
+                        <p class="tab-links"onclick="OpenTab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>Game Programming</span><br>Programming games and developing games</li>
+                            <li><span>Game design</span><br>Designing games and making it work</li>
+                            <li><span>Game development</span><br>Making games from zero to end</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>2024 - Current</span><br>Programming games and developing games</li>
+                            <li><span>2022 - 2023</span><br>Designing games and making it work</li>
+                            <li><span>2020 - 2021</span><br>Making games from zero to end</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents"id ="Education">
+                        <ul>
+                            <li><span>2023 - 2026 University SDU</span><br>Programming games and developing games</li>
+                            <li><span>2020 - 2023 Gymnasium</span><br>Designing games and making it work</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -----------------Services------------------ -->
+ <div id="Services">
+    </div class="container">
+         <h1 class="sub-title">My Services</h1>
+            <div class="Services-list">
+                <div>
+                    <h2>Game Programmer</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. ¨
+                        Magni obcaecati dolorum magnam minus iusto temporibus 
+                        exercitationem laudantium adipisci incidunt consequatur aperiam, consectetur dignissimos molestias 
+                        voluptatem in modi nobis! Tenetur, impedit.</p>
+                        <a href="#">Learn more</a>
+                </div>
+
+                <div>
+                    <h2>Game Designer</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. ¨
+                        Magni obcaecati dolorum magnam minus iusto temporibus 
+                        exercitationem laudantium adipisci incidunt consequatur aperiam, consectetur dignissimos molestias 
+                        voluptatem in modi nobis! Tenetur, impedit.</p>
+                        <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <h2>Web programmer</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. ¨
+                        Magni obcaecati dolorum magnam minus iusto temporibus 
+                        exercitationem laudantium adipisci incidunt consequatur aperiam, consectetur dignissimos molestias 
+                        voluptatem in modi nobis! Tenetur, impedit.</p>
+                        <a href="#">Learn more</a>
+                </div>
+
+          </div>
+    </div>
+
+</div>
+
+<script>
+    var tabLinks = document.getElementsByClassName('tab-links');
+    var tabContents = document.getElementsByClassName('tab-contents');
+
+    function OpenTab(tabName){
+        for (tabLink of tabLinks){
+            tabLink.classList.remove("active-link");
+        }
+
+        for (tabContent of tabContents){
+            tabContent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabName).classList.add("active-tab")
+    }
+
+
+</script>
+
+</body>
+</html>
