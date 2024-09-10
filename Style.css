@@ -95,14 +95,19 @@ nav ul li a:hover::after{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding: 40px;
+
 }
 
 .about-col-1{
+   
     flex: 35%;
+
 }
 .about-col-col-1 img{
     width: 100%;
     border-radius: 15px;
+    
 }
 .about-col-2{
     flex-basis: 60%;
@@ -116,6 +121,7 @@ nav ul li a:hover::after{
 .tab-titles{
     display: flex;
     margin: 20px 0 40px;
+    
 }
 
 .tab-links{
@@ -142,6 +148,7 @@ nav ul li a:hover::after{
 .tab-contents ul li{
     list-style: none;
     margin: 10px 0;
+    display: inline-block;;
 }
 .tab-contents ul li span{
     font-size: 14px;
