@@ -111,26 +111,46 @@ nav ul li a:hover::after{
     margin-top: 400px;
 }
 
-.About-me-section{
-
+.About-me-section {
     background-color: var(--second-color);
     padding: 40px;
-
-    width: 1500px;
+    width: auto;
+    max-width: 1400px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+
+    /* Initially hide the animation */
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 2s ease-in-out;
+}
+
+.About-me-section.p--visible {
+    /* Triggered when the element is in view */
+    transform: translateX(0);
+    opacity: 1;  
 }
 .About-me-section p{
     margin-top: 20px;
 }
 
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);  /* Start off the screen to the left */
+        opacity: 0;                    /* Start fully transparent */
+    }
+    100% {
+        transform: translateX(0);      /* End at the original position */
+        opacity: 1;                    /* Fully visible */
+    }
+}
 
 /* --------Skills----------- */
 
 #Skills{
     padding: 80px 0;
-    margin: 50px auto; /* Center container within its parent */
-    width: 80%; /* Adjust width as needed */
+    margin: 50px auto; 
+    width: 80%;
 
 }
 .skills-grid {
@@ -155,6 +175,31 @@ nav ul li a:hover::after{
 .skill-item:hover{
     background-color: var(--items-color);
     transform: translateY(-5px);
+
+    cursor: pointer;
+}
+
+.skill-description{
+    display: none;
+}
+
+.skill-item.active{
+
+    padding: 40px;
+    justify-content: initial;
+    text-align: left;
+    height: auto;
+    border-radius: 20px;
+}
+.skill-item.active .skill-description {
+    display: block; /* Show the description when the skill-item is active */
+}
+.skill-item.active .Skill-learn-more {
+     margin-top: 20px;
+}
+
+.skill-item.hidden{
+   display: none;
 }
 
 
@@ -165,11 +210,6 @@ nav ul li a:hover::after{
 .skill-item h4{
     margin-top: 10px;
     font-size: 20px;
-}
-
-.skill-item a{
-    color: white;
-    text-decoration: none;
 }
 
 
@@ -193,6 +233,8 @@ nav ul li a:hover::after{
     position: relative;
     padding-left: 50px; /* Adjust the padding to make space for the dot and line */
 }
+
+
 
 .timeline-content {
     display: flex;
