@@ -1,7 +1,9 @@
 :root{
     --primary-color: #0f0f11;
-    --items-color: #e4b549   ; 
-    --second-color: #14141a;
+    --second-color: #1a1a20;
+
+    --third-color: #d8a641; 
+    --fourth-color: #08080e;
 }
 
 *{
@@ -23,7 +25,7 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, var(--primary-color) 100%), 
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 85%, var(--primary-color) 100%), 
     url('Images/OlegBg.png');
     background-size: cover;
     background-position: center;
@@ -34,8 +36,10 @@ body{
 }
 
 #Yellow-text{
-    color: var( --items-color);
+    color: var( --third-color);
 }
+
+
 
 
 .container{
@@ -72,7 +76,7 @@ nav ul li a::after{
     content: '';
     width: 0%;
     height: 3px;
-    background-color: var(--items-color);
+    background-color: var(--third-color);
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -94,7 +98,7 @@ nav ul li a:hover::after{
 }
 
 .header-text p{
-    color: var(--items-color);
+    color: var(--third-color);
 }
 
 .header-title{
@@ -115,7 +119,7 @@ nav ul li a:hover::after{
     background-color: var(--second-color);
     padding: 40px;
     width: auto;
-    max-width: 1400px;
+    max-width: 1200px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 
@@ -152,13 +156,26 @@ nav ul li a:hover::after{
     margin: 50px auto; 
     width: 80%;
 }
-.skills-grid {
-    margin-top: 25px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
+
+.Skills-columns{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height:auto;
 }
 
+
+
+.skills-grid {
+    display: flex;
+    flex-wrap:wrap;
+    grid-gap: 60px; /* The horizontal gap */
+    align-items: baseline;
+    justify-content: center;
+
+    
+}
+ 
 .skill-item{
     display: flex;
     flex-direction: column;
@@ -166,15 +183,20 @@ nav ul li a:hover::after{
     align-items: center;
     text-align: center; 
     background-color: var(--second-color);
-    height: 200px;
-    border-radius: 20px;
 
-    transition: background 0.5s, transform 0.5s;
+    
+    height: 200px;  /* Initial height */
+    width: 200px;   /* Initial width */
+    border-radius: 20px;
+    overflow: hidden; /* Prevent content overflow during transition */
+  
+
+    transition: all 0.5s  ease; /* Ensure smooth transitions */
 }
 .skill-item:hover{
-    background-color: var(--items-color);
+    background-color: var(--third-color);
     transform: translateY(-5px);
-
+    color: var(--primary-color);
     cursor: pointer;
 }
 
@@ -183,22 +205,22 @@ nav ul li a:hover::after{
 }
 
 .skill-item.active{
-
     padding: 40px;
-    justify-content: initial;
+    justify-content: flex-start;
     text-align: left;
-    height: auto;
+    height: 400px; /* Height for active state */
+    width: 400px;  /* Width for active state */
     border-radius: 20px;
+
+    margin: 10px;
+
+    overflow: hidden;
 }
 .skill-item.active .skill-description {
     display: block; /* Show the description when the skill-item is active */
 }
 .skill-item.active .Skill-learn-more {
      margin-top: 20px;
-}
-
-.skill-item.hidden{
-   display: none;
 }
 
 
@@ -219,6 +241,13 @@ nav ul li a:hover::after{
 
 #Experiences{
     padding: 80px 0;
+  
+}
+
+.Experience-section{
+    background-color: var(--fourth-color);
+    box-sizing: border-box; /* Ensures padding is included in the total width/height */
+    box-shadow: rgba(0, 0, 0, 1) 0px 8px 24px;
 }
 
 .timeline {
@@ -250,23 +279,22 @@ nav ul li a:hover::after{
     top: 0;
     width: 4px; /* Thickness of the line */
     height: 100%; /* Full height of the content */
-    background-color: var(--items-color); /* Color of the line */
+    background-color: var(--third-color); /* Color of the line */
 }
 
 .timeline-date {
     width: 80px;
     text-align: right;
     font-size: 24px;
-    color: #ccc;
+    color: #fff;
+    margin-left: 15px;
 }
 
-.timeline-dot {
-    width: 20px;
-    height: 20px;
-    background-color: var(--items-color);
-    border-radius: 50%;
-    margin: 0 20px;
-    position: relative;
+.timeline i{
+    padding: 10px;
+    font-size: 50px;
+    margin-right: 15px;
+    margin-left: 15px;
 }
 
 .timeline-info {
@@ -283,7 +311,7 @@ nav ul li a:hover::after{
 }
 
 .timeline-info h4 {
-    color: var(--items-color);
+    color: var(--third-color);
     font-size: 18px;
     margin-bottom: 15px;
 }
@@ -298,6 +326,7 @@ nav ul li a:hover::after{
 
 #Services{
     padding: 10px 0;
+    margin-top: 40px;
 }
 
 .Services-list{
@@ -313,7 +342,7 @@ nav ul li a:hover::after{
     font-size: 13px;
     font-weight: 300;
     border-radius: 10px;
-    transition: background 0.5s, transform 0.5s;
+    transition: background 0.5s, transform 0.5s, color 0.5s;
 }
 
 .Services-list div i{
@@ -332,11 +361,17 @@ nav ul li a:hover::after{
  color: white;
  margin-top: 20px;
  display: inline-block;;
+ font-size: 20px;
+ transition: color 0.5s;
 }
 
 .Services-list div:hover{
-    background: var(--items-color);
+    background: var(--third-color);
     transform: translateY(-10px);
+    color: var(--primary-color);
+}
+.Services-list div:hover a {
+    color: var(--primary-color);
 }
 
 /* --------Portfolio----------- */
@@ -383,13 +418,26 @@ nav ul li a:hover::after{
      margin-top: 20px;
 }
 .Layer a{
-    color: var(--items-color);
+    color: var(--third-color);
     display: inline-block;
     margin-top: 10px;
 }
 
 
 /* --------Contact----------- */
+
+#Contact{
+    background-color: var(--fourth-color);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+
+    box-sizing: border-box; /* Ensures padding is included in the total width/height */
+    box-shadow: rgb(0, 0, 0) 0px 8px 24px;
+    
+    z-index: 1000; 
+}
 
 .Contact-left {
     color: white;
@@ -407,7 +455,7 @@ nav ul li a:hover::after{
     top: 50%;
     width: 40%; /* Adjust the width of the lines */
     height: 1px; /* Line thickness */
-    background-color: var(--items-color); /* Line color */
+    background-color: var(--third-color); /* Line color */
     transform: translateY(-50%); /* Center the lines vertically */
 }
 
@@ -427,11 +475,11 @@ nav ul li a:hover::after{
 }
 
 .Contact-left p a:hover{
-    color: var(--items-color);
+    color: var(--third-color);
 }
 
 .Social-icons a{
-    color: var(--items-color);
+    color: var(--third-color);
     font-size: 30px;
     margin-top: 20px;
     display: inline-block;
@@ -443,4 +491,9 @@ nav ul li a:hover::after{
 .Social-icons a:hover{
     color: white;
     transform: translateY(-2px);
+}
+
+.sub-title{
+    font-size: 50px;
+    margin-bottom: 30px;
 }
