@@ -3,316 +3,251 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website</title>
-    <link rel="stylesheet" href="Style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="StyleSheet.css">
     <script src="https://kit.fontawesome.com/312632a5d0.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
-    <div id="header">
-
+    <header class="header">
         <div class="container">
-            <nav>
-                <h1 id="Name-title"><span id="Yellow-text">OLEG</span> SECHOVCOV</h1>
-                <ul>
-                    <li><a href="#Home">Home</a></li>
-                    <li><a href="#About">About</a></li>
-                    <li><a href="#Services">Services</a></li>
-                    <li><a href="#Portfolio">Portfolio</a></li>
-                    <li><a href="#Contact">Contact</a></li>
-                </ul> 
-
+            <nav class="nav">
+                <ul class="nav_list">
+                    <li class="nav_item"><a href="#" class="nav_link">Home</a></li>
+                    <li class="nav_item"><a href="#" class="nav_link">Services</a></li>
+                    <li class="nav_item"><a href="#" class="nav_link">Projects</a></li>
+                    <li class="nav_item"><a href="#" class="nav_link">Contact</a></li>
+                </ul>
             </nav>
-            <div class="header-title">
+            <div class="header_line"></div>
+        </div>
+    </header>
 
-                <div class="header-text">
-                    <p>Game/Web developer</p>
-                    <h1>Learn more about me<br>my services and my work</h1>
-                </div>
-                <div>
-                    <button type="button">Click Me!</button>
+    <div class="main">
+
+        <h1 class="main_title">Code-Driven Creativity</h1>
+
+        <div class="columns" style="width: 800px;">
+
+            <div style="display: flex; flex-direction: column;  justify-content: space-between;">
+                <p class="biography">
+                    My Name is Oleg Sechovcov
+                </p>
+                <p class="skill-text"> I am a game developer with 4 years of industry experience, specializing in
+                    programming while also contributing across multiple disciplines, including game design,
+                    level design, 2D/3D art. I am currently taking bechlor in game devolepement and learning technology at the University of Southern Denmark (SDU).
+                    From 2022 to 2023, I expanded my expertise by teaching game development to
+                    school students at UngAalborg. In 2024, I joined Teacup Games, an
+                    indie game studio, where I continue to apply my skills to deliver engaging and innovative gaming
+                    experiences. In my spare time, I focus on developing horror game titles, a genre where my creativity and
+                    technical abilities truly shine. I enjoy joining gamejams, where I can collaborate with other developers and push the boundaries of my skills. I want
+                     to expand my network and connect with like-minded people in the industry.</p>
+                </p>
+
+                <div class="columns" style="justify-content: left; margin-left: 0; margin-bottom: 0;">
+                    <a href="#" class="second_btn">My Projects <i class="fa-solid fa-up-right-from-square"></i></a>
+                    <a href="#" class="main_btn">Contact Me <i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
-
+            <img src="/Assets/Images/f0a4b44d-9a45-42c7-a6b9-d90c52220a34.jpg" alt="Main Image" class="main_img" ,
+                style="width: 300px;">
         </div>
 
 
-        <!-- -----------------About Me------------------ -->
-
-       
-            <div id="About">
-                    <div class="About-me-section">
-                       <span id="Yellow-text"><h1>About me</h1></span> 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in sem mi. 
-                                Nulla sodales quis lacus ac tempus. Maecenas vitae pretium dolor, sagittis dignissim nulla. Nam rutrum sit amet tortor eu euismod. Curabitur id elementum eros, et tristique ipsum. Quisque in efficitur neque. In vel nibh diam. Praesent 
-                                finibus, ex quis feugiat porta, purus orci luctus eros, 
-                                vitae feugiat ex nisl a nulla. Nullam consectetur eu turpis et faucibus. Nam fermentum in risus a malesuada.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in sem mi. 
-                                Nulla sodales quis lacus ac tempus. Maecenas vitae pretium dolor, sagittis dignissim nulla. Nam rutrum sit amet tortor eu euismod. Curabitur id elementum eros, et tristique ipsum. Quisque in efficitur neque. In vel nibh diam. Praesent 
-                                finibus, ex quis feugiat porta, purus orci luctus eros, 
-                                vitae feugiat ex nisl a nulla. Nullam consectetur eu turpis et faucibus. Nam fermentum in risus a malesuada</p>
-                    </div>   
-            </div>
-
-            <section class="Skills-section">
-               
-                    <div class="Skills-columns">
-                        <div class="Skills-right-column">
-
-                            <div id="Skills">
-                                <span id="Yellow-text"> <h1 class="sub-title">Skills</h1></span>
-                                <div class="skills-grid">
-                                    <div class="skill-item" id="skill1" onclick="Pressed('skill1')">
-                                        <div class="skill-bar">
-                                            <img src="/Images/Icons/c-sharp.png" alt="">
-                                            <h4>C#</h4>
-                                            <p class="skill-description">orem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in sem mi. 
-                                                Nulla sodales quis lacus ac tempus. Maecenas vitae pretium dolor, sagittis dignissim nulla. Nam rutrum sit amet tortor eu euismod. Curabitur id elementum eros, et tristique ipsum. Quisque in efficitur neque. In vel nibh diam. Praesent 
-                                                finibus, ex quis feugiat porta, purus orci </p>
-                                        </div>
-                                        <p class="Skill-learn-more">Learn more</p>
-                                    </div>
-                
-                                    <div class="skill-item" id="skill2" onclick="Pressed('skill2')">
-                                        <div class="skill-bar">
-                                            <img src="/Images/Icons/java-script.png" alt="">
-                                            <h4>JavaScript</h4>
-                                            <p class="skill-description">orem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in sem mi. 
-                                                Nulla sodales quis lacus ac tempus. Maecenas vitae pretium dolor, sagittis dignissim nulla. Nam rutrum sit amet tortor eu euismod. Curabitur id elementum eros, et tristique ipsum. Quisque in efficitur neque. In vel nibh diam. Praesent 
-                                                finibus, ex quis feugiat porta, purus orci</p>
-                                        </div>
-                                        <p class="Skill-learn-more">Learn more</p>
-                                    </div>
-                
-                                    <div class="skill-item" id="skill3" onclick="Pressed('skill3')">
-                                        <div class="skill-bar">
-                                            <img src="/Images/Icons/java.png" alt="">
-                                            <h4>Java</h4>
-                                            <p class="skill-description">orem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in sem mi. 
-                                                Nulla sodales quis lacus ac tempus. Maecenas vitae pretium dolor, sagittis dignissim nulla. Nam rutrum sit amet tortor eu euismod. Curabitur id elementum eros, et tristique ipsum. Quisque in efficitur neque. In vel nibh diam. Praesent 
-                                                finibus, ex quis feugiat porta, purus orci</p>
-                                        </div>
-                                        <p class="Skill-learn-more">Learn more</p>
-                                    </div>
-                
-                                    <div class="skill-item" id="skill4" onclick="Pressed('skill4')">
-                                        <div class="skill-bar">
-                                            <img src="/Images/Icons/r.png" alt="">
-                                            <h4>R</h4>
-                                            <p class="skill-description">orem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in sem mi. 
-                                                Nulla sodales quis lacus ac tempus. Maecenas vitae pretium dolor, sagittis dignissim nulla. Nam rutrum sit amet tortor eu euismod. Curabitur id elementum eros, et tristique ipsum. Quisque in efficitur neque. In vel nibh diam. Praesent 
-                                                finibus, ex quis feugiat porta, purus orci</p>
-                                        </div>
-                                        <p class="Skill-learn-more">Learn more</p>
-                                    </div>
-                
-                                    <div class="skill-item" id="skill5" onclick="Pressed('skill5')">
-                                        <div class="skill-bar">
-                                            <img src="/Images/Icons/postgre.png" alt="">
-                                            <h4>SQL</h4>
-                                            <p class="skill-description">orem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in sem mi. 
-                                                Nulla sodales quis lacus ac tempus. Maecenas vitae pretium dolor, sagittis dignissim nulla. Nam rutrum sit amet tortor eu euismod. Curabitur id elementum eros, et tristique ipsum. Quisque in efficitur neque. In vel nibh diam. Praesent 
-                                                finibus, ex quis feugiat porta, purus orci</p>
-                                        </div>
-                                        <p class="Skill-learn-more">Learn more</p>
-                                    </div>
-                
-                                    <div class="skill-item" id="skill6" onclick="Pressed('skill6')">
-                                        <div class="skill-bar">
-                                            <img src="/Images/Icons/html.png" alt="">
-                                            <h4>HTML</h4>
-                                            <p class="skill-description">orem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in sem mi. 
-                                                Nulla sodales quis lacus ac tempus. Maecenas vitae pretium dolor, sagittis dignissim nulla. Nam rutrum sit amet tortor eu euismod. Curabitur id elementum eros, et tristique ipsum. Quisque in efficitur neque. In vel nibh diam. Praesent 
-                                                finibus, ex quis feugiat porta, purus orci</p>
-                                        </div>
-                                        <p class="Skill-learn-more">Learn more</p>
-                                    </div>
-                                    <div class="skill-item" id="skill7" onclick="Pressed('skill7')">
-                                        <div class="skill-bar">
-                                            <img src="/Images/Icons/css-3.png" alt="">
-                                            <h4>CSS</h4>
-                                            <p class="skill-description">orem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in sem mi. 
-                                                Nulla sodales quis lacus ac tempus. Maecenas vitae pretium dolor, sagittis dignissim nulla. Nam rutrum sit amet tortor eu euismod. Curabitur id elementum eros, et tristique ipsum. Quisque in efficitur neque. In vel nibh diam. Praesent 
-                                                finibus, ex quis feugiat porta, purus orci</p>
-                                        </div>
-                                        <p class="Skill-learn-more">Learn more</p>
-                                    </div>
-                
-                                    <div class="skill-item" id="skill8" onclick="Pressed('skill8')">
-                                        <div class="skill-bar">
-                                            <img src="/Images/Icons/NET-Framework-Logo.png" alt="">
-                                            <h4>.NET</h4>
-                                            <p class="skill-description">orem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in sem mi. 
-                                                Nulla sodales quis lacus ac tempus. Maecenas vitae pretium dolor, sagittis dignissim nulla. Nam rutrum sit amet tortor eu euismod. Curabitur id elementum eros, et tristique ipsum. Quisque in efficitur neque. In vel nibh diam. Praesent 
-                                                finibus, ex quis feugiat porta, purus orci</p>
-                                        </div>
-                                        <p class="Skill-learn-more">Learn more</p>
-            
-                                    </div>
-
-
-                                    
-                                </div>
-                            </div>
-    
-                        </div>
-                        <div class="Skills-left-column">
-                        </div>
-                    </div>
-               
-            </section>
-       
-            <section class="Experience-section">
-                <div class="container">
-                    <div id="Experiences">
-                        
-                        <div class="timeline">
-                            <span id="Yellow-text"><h1>Experience</h1></span>
-                        <div class="timeline-item"> 
-                       
-                            <div class="timeline-content">
-                                <div class="timeline-date">
-                                    <span>2022</span>
-                                </div>
-                                <i class="fa-solid fa-building-columns"></i>
-                                <div class="timeline-info">
-                                    <h3>Lead Python Developer</h3>
-                                    <h4>XYZ Corp, Remote</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in sem mi. 
-                                        Nulla sodales quis lacus ac tempus. Maecenas vitae pretium dolor, sagittis dignissim nulla. Nam rutrum sit amet tortor eu euismod. Curabitur id elementum eros, et tristique ipsum. Quisque in efficitur neque. In vel nibh diam. Praesent 
-                                        finibus, ex quis feugiat porta, purus orci luctus eros, 
-                                        vitae feugiat ex nisl a nulla. Nullam consectetur eu turpis et faucibus. Nam fermentum in risus a malesuada.
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in sem mi. 
-                                        Nulla sodales quis lacus ac tempus. Maecenas vitae pretium dolor, sagittis dignissim nulla. Nam rutrum sit amet tortor eu euismod. Curabitur id elementum eros, et tristique ipsum. Quisque in efficitur neque. In vel nibh diam. Praesent 
-                                        finibus, ex quis feugiat porta, purus orci luctus eros, </p>
-                                </div>
-                            </div>
-    
-                            <div class="timeline-content">
-                                <div class="timeline-date">
-                                    <span>2024</span>
-                                </div>
-                                <i class="fa-solid fa-school"></i>
-                                <div class="timeline-info">
-                                    <h3>Lead C# Developer</h3>
-                                    <h4>Base Corp, Remote</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in sem mi. 
-                                        Nulla sodales quis lacus ac tempus. Maecenas vitae pretium dolor, sagittis dignissim nulla. Nam rutrum sit amet tortor eu euismod. Curabitur id elementum eros, et tristique ipsum. Quisque in efficitur neque. In vel nibh diam. Praesent 
-                                        finibus, ex quis feugiat porta, purus orci luctus eros, 
-                                        vitae feugiat ex nisl a nulla. Nullam co </p>
-                                </div>
-                            </div>
-    
-                    </div>
-                    </div>
-                </div>
-          
-            </section>
-        <!-- -----------------Services------------------ -->
-        <div id="Services">
-            <div class="container">
-                <span id="Yellow-text"><h1 class="sub-title">My Services</h1></span>
-                <div class="Services-list">
-                    <div>
-                        <i class="fa-solid fa-gamepad"></i>
-                        <h2>Game Programmer</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. ¨
-                            Magni obcaecati dolorum magnam minus iusto temporibus
-                            exercitationem laudantium adipisci incidunt consequatur aperiam, consectetur dignissimos
-                            molestias
-                            voluptatem in modi nobis! Tenetur, impedit.</p>
-                        <a href="#">Learn more</a>
-                    </div>
-
-                    <div>
-                        <i class="fa-solid fa-pen"></i>
-                        <h2>Game Designer</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. ¨
-                            Magni obcaecati dolorum magnam minus iusto temporibus
-                            exercitationem laudantium adipisci incidunt consequatur aperiam, consectetur dignissimos
-                            molestias
-                            voluptatem in modi nobis! Tenetur, impedit.</p>
-                        <a href="#">Learn more</a>
-                    </div>
-
-                    <div>
-                        <i class="fa-solid fa-code"></i>
-                        <h2>Web programmer</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. ¨
-                            Magni obcaecati dolorum magnam minus iusto temporibus
-                            exercitationem laudantium adipisci incidunt consequatur aperiam, consectetur dignissimos
-                            molestias
-                            voluptatem in modi nobis! Tenetur, impedit.</p>
-                        <a href="#">Learn more</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- -----------------Portfolio------------------ -->
-        <div id="Portfolio">
-            <div class="container">
-                <span id="Yellow-text"> <h1 class="sub-title">My work</h1></span>
-
-                <div class="Work-list">
-                    <div class="Work">
-                        <img src="/Images/bDD06e.png">
-                        <div class="Layer">
-                            <h3>Cell HEll</h3>
-                            <p>The game was made in 1 semester at SDU southeren University</p>
-                            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                    <div class="Work">
-                        <img src="/Images/screenshot_01.jpg">
-                        <div class="Layer">
-                            <h3>IN THE DEEP</h3>
-                            <p>The game was made with Teacup Games during my University semester</p>
-                            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="Work">
-                        <img src="/Images/screenshot_01.jpg">
-                        <div class="Layer">
-                            <h3>IN THE DEEP</h3>
-                            <p>The game was made with Teacup Games</p>
-                            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- -----------------Contact------------------ -->
-            
-        </div>
-        <footer id="Contact">
-            <div class="container">
-                <div class="row">
-                    <div class="Contact-left">
-                        <h1 class="sub-title">Contact Me</h1>
-                        <p><a href="mailto:olegsechovcov@gmail.com">olegsechovcov@gmail.com</a></p><br>
-                        <p><a href="tel:+42789802">+42789802</a></p>
-                        <div class="Social-icons">
-                            <a href="https://www.facebook.com/oleg.sechovcov/"><i
-                                    class="fa-brands fa-facebook"></i></a>
-                            <a href="https://www.linkedin.com/in/oleg-sechovcov-005a80217/"><i
-                                    class="fa-brands fa-linkedin"></i></a>
-                            <a href="https://github.com/GreyZar37"><i class="fa-brands fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
     </div>
 
-   
+    <div class="skills-section">
+        <div class="container">
+            <h2 class="sub_title">My knowledge and skills</h2>
+            <div class="skills">
+                <div class="skill">
+                    <i class="fas fa-code"></i>
+                    <h3 class="skill-title">Programming</h3>
+
+                    <p class="skill-text">
+                        Proficient in writing clean, maintainable, and modular code. Strong understanding of object
+                        oriented programming and design patterns
+                        commonly used in game devolepement. Experienced in debugging complex gameplay systems and
+                        optimizing code for performance and memory usage.
+                        Developed core gameplay mechanics including combat systems, inventory management, quest system
+                        and dialogue systems. Understanding of third party APIs such as Steamworks and Mirror.
+                    </p>
+
+                     <img src="/Assets/Images/Skills/Skærmbillede 2025-05-11 192004.png" alt="3D Modelling" class="skill_img">
+
+                </div>
+                <div class="skill">
+                    <i class="fas fa-gamepad"></i>
+                    <h3 class="skill-title">Game Design</h3>
+                    
+                    <p class="skill-text">Proficient in designing engaging core gameplay loops that effectively balance
+                        challenge
+                        and reward, ensuring satisfying moment-to-moment interactions. Skilled in creating compelling
+                        progression systems that foster
+                        long-term player engagement, including skill trees, unlockable content, and well-balanced
+                        in-game economies. Experienced in developing
+                        psychological horror mechanics that build sustained tension and evoke fear without relying on
+                        cheap jump scares. Strong understanding of horror
+                        design theory and its practical application, incorporating concepts such
+                        as fear of the unknown, isolation, environmental storytelling, and loss of player control to
+                        create immersive and unsettling experiences.
+                    </p>
+                     <img src="/Assets/Images/Skills/Skrmbillede_2025-01-09_160213.png" alt="3D Modelling" class="skill_img">
+
+                </div>
+                <div class="skill">
+                    <i class="fa-solid fa-cube"></i>
+                    <h3 class="skill-title">3D modelling</h3>
+                    <p class="skill-text">
+                        Proficient in creating low-poly 3D models that authentically replicate the visual aesthetic of
+                        the original old PlayStation games. Skilled at working within strict polygon count limits to
+                        optimize models for low-resolution rendering.
+                        Experienced in creating UV maps and textures that enhance the visual quality of low-poly models
+                        while maintaining a retro look. Creating game-ready assets, including characters, environments,
+                        and props, that are optimized for performance without sacrificing artistic integrity.
+                    </p>
+
+                    <img src="/Assets/Images/Skills/BlenderImage.png" alt="3D Modelling" class="skill_img">
+                </div>
+                <div class="skill">
+                    <i class="fa-solid fa-pen"></i>
+                    <h3 class="skill-title">Story Writing</h3>
+                    <p class="skill-text">
+                        Proficient in crafting psychologically engaging horror narratives that focus on building
+                        tension, dread, and emotional unease rather than relying solely on shock value. Experienced in
+                        designing unsettling worlds and environments that act as narrative devices through environmental
+                        storytelling and symbolic visual cues
+                        Knowledgeable in leveraging horror theory concepts like Fear of the Unknown, Isolation, The
+                        Uncanny, and Loss of Control to create memorable and impactful narratives.Adept at collaborating
+                        with designers and audio teams to ensure that narrative beats are reinforced through visual and
+                        sound design, heightening emotional impact.
+                    </p>
+                        <img src="/Assets/Images/Skills/Skærmbillede 2025-05-11 191431.png" alt="Unity" class="skill_img">
+
+                </div>
+                <div class="skill">
+                    <i class="fa-brands fa-unity"></i>
+                    <h3 class="skill-title">Unity</h3>
+                    <p class="skill-text">
+                        Proficient in using Unity for game development, including experience with the Unity Editor,
+                        scripting in C#, and implementing game mechanics. Knowledgeable in optimizing game performance
+                        and memory usage, as well as debugging and troubleshooting issues within the Unity environment.
+                        4 years of experience in using Unity for game developement.
+                    </p>
+                     <img src="/Assets/Images/Skills/Skærmbillede 2025-05-11 191023.png" alt="Unity" class="skill_img">
+
+                </div>
+                <div class="skill">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3 class="skill-title">Project Management</h3>
+                    <p class="skill-text">Proficient in planning and managing game development projects from concept to
+                        release, ensuring milestones are met on time and within budget. Experienced with Agile and Scrum
+                        methodologies, including sprint planning, task prioritization, and regular stand-ups to keep
+                        teams aligned
+                        Familiar with version control and collaborative development workflows using Git, ensuring smooth
+                        integration of work across teams
+                    </p>
+                    <img src="/Assets/Images/Skills/Skærmbillede 2025-05-11 191541.png" alt="Unity" class="skill_img">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 
-    <script src="javascript.js"></script>
+    <div class="projects-section">
+        <div class="container" style="display: flex; flex-direction: column; align-items: center;">
+
+
+            <video controls style=" width: 640px; height: 360px; margin-left: 30px;">
+                <source src="/Assets/Images/HellDive Trailer.webm" type="video/mp4">
+
+            </video>
+
+            <div class="projects">
+
+                <div class="project">
+                    <img src="/Assets/Images/CD1S.png" alt="Project Image" class="project_img">
+                    <h3 class="project-title">In The Walls</h3>
+                    <h4 class="project-text">May 2025</h4>
+                    <p class="project-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut elit
+                        euismod,
+                        tristique felis ac, ultricies odio. Praesent in
+                        risus eget erat lacinia vehicula ac at lorem. Aliquam et lacus et massa tempor
+                        vulputate tincidunt faucibus arcu. Morbi eu aliquet nulla, sit amet efficitur sem. Pellentesque
+                        bibendum orci sed nulla vulputate, ut pellentesque ipsum</p>
+                    <a href="#" class="second_btn">Not Released </a>
+                </div>
+
+                <div class="project">
+                    <img src="/Assets/Images/CD2S.png" alt="Project Image" class="project_img">
+                    <h3 class="project-title">Hell Dive</h3>
+                    <h4 class="project-text">Feburary 2025</h4>
+
+                    <p class="project-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut elit
+                        euismod,
+                        tristique felis ac, ultricies odio. Praesent in
+                        risus eget erat lacinia vehicula ac at lorem. Aliquam et lacus et massa tempor
+                        vulputate tincidunt faucibus arcu. Morbi eu aliquet nulla, sit amet efficitur sem. Pellentesque
+                        bibendum orci sed nulla vulputate, ut pellentesque ipsum</p>
+                    <a href="#" class="main_btn">Visit Steam <i class="fa-solid fa-up-right-from-square"></i></a>
+
+                </div>
+
+                <div class="project">
+                    <img src="/Assets/Images/CD Cell hell.png" alt="Project Image" class="project_img">
+                    <h3 class="project-title">Cell Hell</h3>
+                    <h4 class="project-text">April 2024</h4>
+                    <p class="project-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut elit
+                        euismod,
+                        tristique felis ac, ultricies odio. Praesent in
+                        risus eget erat lacinia vehicula ac at lorem. Aliquam et lacus et massa tempor
+                        vulputate tincidunt faucibus arcu. Morbi eu aliquet nulla, sit amet efficitur sem. Pellentesque
+                        bibendum orci sed nulla vulputate, ut pellentesque ipsum</p>
+
+                    <a href="#" class="second_btn">Not Released </a>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="Contact-section">
+            <div class="container">
+                <div class="contact-form">
+                    <h2>Contact Me</h2>
+                    <form action="mailto:olegsechovcov@gmail.com" method="POST" enctype="text/plain">
+                        <input type="text" name="name" placeholder="Your Name" required />
+                        <input type="email" name="email" placeholder="Your Email" required />
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="columns">
+
+                <div class="socials"">
+                    <a href=" https://www.linkedin.com/in/oleg-sechovcov-0b1b4a1b3/" class="social_link"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/OlegSechovcov" class="social_link"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="https://www.facebook.com/oleg.sechovcov" class="social_link"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.discord.com/users/oleg_sechovcov" class="social_link"><i
+                            class="fa-brands fa-discord"></i></a>
+                    <a href="https://www.instagram.com/oleg_sechovcov/" class="social_link"><i
+                            class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+
+
+
+        </div>
+
 </body>
 
 </html>
